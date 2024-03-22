@@ -145,3 +145,45 @@ const Keyboard = ({ handlePower }) => {
         )}
       </div>
    
+   <div key={5} className="row5 row">
+        {row5.map((item, index) =>
+          item === "shift" ? (
+            <div key={index} className="key w-[13%]">
+              {item}
+            </div>
+          ) : (
+            <div key={index} className="key w-[6.2%]">
+              {item}
+            </div>
+          )
+        )}
+      </div>
+      <div key={6} className="row6 row">
+        {row6.map((item, index) =>
+          item === "space" ? (
+            <div key={index} className="key w-[27%]"></div>
+          ) : item === "icon" ? (
+            <i
+              key={index}
+              className="fa fa-windows key w-[7.5%]"
+              aria-hidden="true"
+            ></i>
+          ) : item === "updown" ? (
+            <i
+              key={index}
+              className="fa fa-angle-up key w-[7.5%] "
+              aria-hidden="true"
+            ></i>
+          ) : (
+            <div key={index} className="key w-[7.5%]">
+              {item}
+            </div>
+          )
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Keyboard;
+
