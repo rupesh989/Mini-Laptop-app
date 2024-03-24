@@ -115,5 +115,73 @@ const Right = () => {
             </div>
           </>
         )}
+{!welcome && (
+          <>
+            <p
+              className={`${
+                error ? "visible" : "invisible"
+              } text-red-700 text-xs bg-white rounded-md px-1`}
+            >
+              Password is incorrect
+            </p>
+            <div className="password flex justify-center">
+              <input
+                className={`${
+                  error ? " border-red-700" : "border-gray-400"
+                } w-[55%] h-5 border-2 text-black text-sm outline-none`}
+                type={showPassword ? "text" : "password"}
+                name="password"
+                placeholder="password..."
+                value={password}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                  setError(false);
+                }}
+                onFocus={() => {
+                  setFocus(true);
+                }}
+                onBlur={() => {
+                  setFocus(false);
+                }}
+              />
+              <i
+                onClick={() => setShowPassword(!showPassword)}
+                className="fa fa-eye bg-black border border-gray-400 hover:border-white active:border-white active:scale-110"
+                aria-hidden="true"
+              ></i>
+              <i
+                onClick={onSubmit}
+                className="fa fa-arrow-circle-right border border-gray-400 bg-black hover:border-white active:scale-110"
+              ></i>
+            </div>
+
+            <div className="signinOptions flex flex-col gap-2">
+              <p className="text-xs">Sign-in options</p>
+
+              <div
+                className={`${focus ? "xs:invisible" : "xs:visible"}
+                     sm:visible keyandfinger flex justify-center
+                `}
+              >
+                <i
+                  className="fa fa-key bg-slate-800 p-[2%] border-2 border-transparent hover:border-white active:border-white active:scale-110"
+                  aria-hidden="true"
+                ></i>
+                <span className="bg-slate-800 p-[2%] border-2 border-transparent hover:border-white active:border-white active:scale-110">
+                  <BiFingerprint />
+                </span>
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+      <Right />
+    </div>
+  );
+};
+
+export default Screen3;
+  
+
 
         
