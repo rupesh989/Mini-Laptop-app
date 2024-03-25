@@ -49,4 +49,54 @@ const Screens = ({
   const handleClick = () => {
     setThird(true);
   };
+  const handleFourth = () => {
+    setFourth(true);
+  };
+
+  const handleSleep = () => {
+    setFourth(false);
+    setThird(false);
+    setSecond(true);
+    setFirst(false);
+  };
+
+  useEffect(() => {
+    if (third && fingerScan) {
+      setTimeout(() => {
+        setFourth(true);
+      }, 2000);
+    }
+  }, [third, fingerScan]);
+
+  // handling sequence of the screens
+  const ScreenSequence = () => {
+    if (fourth) {
+      return (
+        <Desktop
+          handleCelebrate={handleCelebrate}
+          celebrate={celebrate}
+          handleShutDown={handleShutDown}
+          handleRestart={handleRestart}
+          handleSleep={handleSleep}
+        />
+      );
+    } else if (third) {
+      return <Screen3 fingerScan={fingerScan} handleFourth={handleFourth} />;
+    } else if (second) {
+      return <Screen2 handleClick={handleClick} />;
+    } else if (first) {
+      return <Screen1 />;
+    } else if (shutDown) {
+      return <ShutDown />;
+    } else return null;
+  };
+
+  return (
+    <div className="screen bg-slate-800 w-[95%] h-5/6">
+      <ScreenSequence />
+    </div>
+  );
+};
+
+export default Screens;
 
