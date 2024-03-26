@@ -29,7 +29,9 @@ const TopPanel = ({
         <figure className="absolute sm:w-6 xs:w-4 bottom-0">
           <img src={hp_Logo} alt="hp_logo" />
         </figure>
-
+        <figure className="absolute bg-white rounded-full sm:w-6 xs:w-4 top-0">
+          <img src={webcam} alt="webcam" />
+        </figure>
       </div>
     </>
   );
