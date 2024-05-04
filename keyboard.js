@@ -71,31 +71,3 @@ const Keyboard = ({ handlePower }) => {
     "enter",
     "pgdn",
   ];
-  const row5 = [
-    "shift",
-    "Z",
-    "X",
-    "C",
-    "V",
-    "B",
-    "N",
-    "M",
-    "< ,",
-    "> .",
-    "? /",
-    "shift",
-    "end",
-  ];
-  const row6 = [
-    "ctrl",
-    "fn",
-    "icon",
-    "alt",
-    "space",
-    "alt",
-    "ctrl",
-    "<",
-    "updown",
-    ">",
-  ];
-  return (
