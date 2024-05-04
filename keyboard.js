@@ -135,29 +135,4 @@ const Keyboard = ({ handlePower }) => {
         {row4.map((item) =>
           item === "enter" ? (
             <div key={item} className="key w-[11%]">
-              {item}
-            </div>
-          ) : (
-            <div key={item} className="key w-[6.2%]">
-              {item}
-            </div>
-          )
-        )}
-      </div>
-   
-   <div key={5} className="row5 row">
-        {row5.map((item, index) =>
-          item === "shift" ? (
-            <div key={index} className="key w-[13%]">
-              {item}
-            </div>
-          ) : (
-            <div key={index} className="key w-[6.2%]">
-              {item}
-            </div>
-          )
-        )}
-      </div>
-      <div key={6} className="row6 row">
-        {row6.map((item, index) =>
 
