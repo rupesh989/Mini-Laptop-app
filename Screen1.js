@@ -33,4 +33,3 @@ const Screen1 = () => (
   </div>
 );
 
-export default Screen1;
