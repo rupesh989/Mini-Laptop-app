@@ -107,31 +107,3 @@ const getLocalTodos = () => {
     }
 }
 
-// Function to delete local todo
-const deleteLocalTodos = (todo) => {
-    let todos;
-    if (localStorage.getItem("todos") === null) {
-        todos = [];
-    }
-    else {
-        todos = JSON.parse(localStorage.getItem("todos"));
-    }
-
-    let todoText = todo.children[0].innerHTML;
-    let todoIndex = todos.indexOf(todoText);
-    todos.splice(todoIndex, 1);
-    localStorage.setItem("todos", JSON.stringify(todos));
-    // Array functions : slice / splice
-    console.log(todoIndex);
-}
-
-const editLocalTodos = (todo) => {
-    let todos = JSON.parse(localStorage.getItem("todos"));
-    let todoIndex = todos.indexOf(todo);
-    todos[todoIndex] = inputBox.value;
-    localStorage.setItem("todos", JSON.stringify(todos));
-}
-
-document.addEventListener('DOMContentLoaded', getLocalTodos);
-addBtn.addEventListener('click', addTodo);
-todoList.addEventListener('click', updateTodo);
