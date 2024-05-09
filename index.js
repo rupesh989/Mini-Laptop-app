@@ -74,36 +74,4 @@ const saveLocalTodos = (todo) => {
 }
 
 // Function to get local todo
-const getLocalTodos = () => {
-    let todos;
-    if (localStorage.getItem("todos") === null) {
-        todos = [];
-    }
-    else {
-        todos = JSON.parse(localStorage.getItem("todos"));
-        todos.forEach(todo => {
-
-            //Creating p tag
-            const li = document.createElement("li");
-            const p = document.createElement("p");
-            p.innerHTML = todo;
-            li.appendChild(p);
-
-            
-// Creating Edit Btn
-            const editBtn = document.createElement("button");
-            editBtn.innerText = "Edit";
-            editBtn.classList.add("btn", "editBtn");
-            li.appendChild(editBtn);
-
-            // Creating Delete Btn
-            const deleteBtn = document.createElement("button");
-            deleteBtn.innerText = "Remove";
-            deleteBtn.classList.add("btn", "deleteBtn");
-            li.appendChild(deleteBtn);
-
-            todoList.appendChild(li);
-        });
-    }
-}
 
