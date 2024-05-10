@@ -28,21 +28,3 @@ const addTodo = () => {
         li.appendChild(p);
 
 
-        // Creating Edit Btn
-        const editBtn = document.createElement("button");
-        editBtn.innerText = "Edit";
-        editBtn.classList.add("btn", "editBtn");
-        li.appendChild(editBtn);
-
-        // Creating Delete Btn
-        const deleteBtn = document.createElement("button");
-        deleteBtn.innerText = "Remove";
-        deleteBtn.classList.add("btn", "deleteBtn");
-        li.appendChild(deleteBtn);
-
-        todoList.appendChild(li);
-        inputBox.value = "";
-
-        saveLocalTodos(inputText);
-    }
-}
