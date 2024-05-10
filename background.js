@@ -75,12 +75,7 @@ const Background = () => {
             opacity: {
               value: 0.5,
             },
-            shape: {
-              type: "circle",
-            },
-            size: {
-              random: true,
-              value: 5,
+            
             },
           },
           detectRetina: true,
