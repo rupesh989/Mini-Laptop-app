@@ -65,16 +65,7 @@ const Background = () => {
               speed: 3,
               straight: true,
             },
-            number: {
-              density: {
-                enable: true,
-                area: 1000,
-              },
-              value: 150,
-            },
-            opacity: {
-              value: 0.5,
-            },
+           
             
             },
           },
