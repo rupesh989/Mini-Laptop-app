@@ -47,17 +47,7 @@ const Background = () => {
             color: {
               value: "#ffffff",
             },
-            links: {
-              color: "#ffffff",
-              distance: 50,
-              enable: true,
-              opacity: 0.5,
-              width: 2,
-            },
-            collisions: {
-              enable: false,
-            },
-          
+           
            
             
             },
