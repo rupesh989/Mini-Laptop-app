@@ -57,14 +57,7 @@ const Background = () => {
             collisions: {
               enable: false,
             },
-            move: {
-              direction: "none",
-              enable: true,
-              outMode: "bounce",
-              random: false,
-              speed: 3,
-              straight: true,
-            },
+          
            
             
             },
