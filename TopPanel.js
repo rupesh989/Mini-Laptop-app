@@ -6,13 +6,7 @@ import Screens from "./Screens";
 
 // Camera, screen and hp logo of Laptop(top panel)
 const TopPanel = ({
-  power,
-  fingerScan,
-  celebrate,
-  handleCelebrate,
-  handleShutDown,
-  handleRestart,
-  shuttingDown,
+
 }) => {
   return (
     <>
