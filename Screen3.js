@@ -44,16 +44,7 @@ const Screen3 = ({ fingerScan, handleFourth }) => {
             Rupesh Bavaskar
           </p>
         </div>
-        <div className="user flex items-center basis-[15%] gap-1">
-          <img
-            className="rounded-full w-[45%] h-4/5 basis-1/4"
-            src={user}
-            alt="user profile"
-          />
-          <p className="basis-3/4 text-xxs text-white overflow-hidden">
-            Other User
-          </p>
-        </div>
+       
       </div>
     );
   };
