@@ -34,16 +34,7 @@ const Screen3 = ({ fingerScan, handleFourth }) => {
   const Left = () => {
     return (
       <div className="left basis-2/12 flex flex-col justify-end">
-        <div className="user bg-red-600 flex items-center basis-[15%]">
-          <img
-            className="rounded-full w-1/2 h-full basis-1/4"
-            src={profile}
-            alt="profile"
-          />
-          <p className="basis-3/4 text-xxs text-white overflow-hidden">
-            Rupesh Bavaskar
-          </p>
-        </div>
+    
        
       </div>
     );
